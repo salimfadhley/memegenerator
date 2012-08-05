@@ -1,0 +1,46 @@
+{% extends './common.html' %}
+
+{% block title %} {{ name }}'s Page of Awesome Memes! {% end %}
+
+{% block content %} 
+
+<div id="header">  
+    <span id="logout">Not {{ name }}? <a href="/logout">Logout</a></span> 
+</div>
+
+<div id="meme_maker">
+    <p>Click to choose a template, write your text, and make your meme!</p>
+    <ul id="meme_bar">
+        <li><img class="display" src="/static/img/base_memes/thumbnails/foreveralone.jpg" /></li>
+        <li><img class="display" src="/static/img/base_memes/thumbnails/futuramafry.jpg" /></li>
+        <li><img class="display" src="/static/img/base_memes/thumbnails/ggg.jpg" /></li>
+        <li><img class="display" src="/static/img/base_memes/thumbnails/mostinteresting.jpg" /></li>
+        <li><img class="display" src="/static/img/base_memes/thumbnails/willywonka.jpg" /></li>
+        <li><img class="display" src="/static/img/base_memes/thumbnails/yuno.jpg" /></li>
+    </ul>
+</div>
+
+<div id="preview">
+    <div id="previewpic">
+        <p>Selected:</p>
+        <img src="/static/img/base_memes/thumbnails/ggg.jpg">
+    </div>    
+    <form id="meme_form" method="POST" action={{ "/user/" + name }}>
+      <input type="text" name="top" value="TOP TEXT"/>
+      <input type="text" name="bottom" value="BOTTOM TEXT"/>
+      <input id="hidden_var" type="hidden" name="chosen_picture" value="/static/img/base_memes/ggg.jpg">
+      <input type="submit" value="MAKE MEME!"/>
+    </form>
+</div>
+
+
+<div id="meme_history">
+    <p>Last meme made by {{ name }}</p>
+    {% if meme is not None %} 
+        <img src={{ meme["location"] }} />
+    {% else %}
+        <p id="nomemes">{{ name + " has not yet made any memes" }}</p> 
+    {% end %}
+</div>
+
+{% end %}

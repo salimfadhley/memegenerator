@@ -1,0 +1,116 @@
+body {
+  text-align:center;
+  font-family:Charcoal, sans-serif;
+  font-size:22px;
+  background-color:#888888;
+  text-transform:uppercase;
+}
+
+a:hover {
+  font-weight:bold;
+}
+
+a {
+  color:red;
+  text-decoration:none;
+}
+
+a:visited {
+  color:red;
+}
+
+#header {
+  width:100%;
+  height:30px;
+  border-top-left-radius:7px;
+  border-top-right-radius:7px;
+  background-color:yellow;
+  text-align:right;
+  font-size:10px;
+  line-height:30px;
+}
+
+#header span {
+  margin-right:10px;
+}
+
+#meme_maker {
+  border-radius:7px;
+  border-style:dashed;
+  border-width:2px;
+  padding:0px;
+  width:95%;
+  margin:auto;
+  margin-bottom:0px;
+  margin-top:20px;
+}
+
+#meme_bar {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  list-style: none;
+}
+
+#nomemes {
+  border-style:solid;
+  border-width:5px;
+  margin:auto;
+  width:450px;
+  height:450px;
+  line-height:450px;
+  font-size:16px;
+}
+
+#meme_bar li {
+  display: inline;
+  padding: 0 10px;
+}
+
+#preview {
+  margin-top:50px;
+  float:left;
+  width:40%;
+  height:600px;
+}
+
+#previewpic {
+  margin-top:15px;
+  height:30%;
+}
+
+
+#meme_history {
+  float:left;
+  width:60%;
+  height:600px;
+}
+
+#meme_form {
+  margin:auto;
+  margin-top:20px;
+}
+
+#meme_form input {
+  width:50%;
+  clear:both;
+}
+
+#content {
+  background-color:#FFFFFF;
+  width:960px;
+  height:900px;
+  margin:auto;
+  border-radius:7px;
+  box-shadow: 8px 8px 10px #333333;
+}
+
+.display {
+  opacity:0.3;
+}
+
+.display:hover {
+  opacity:1.0;
+}

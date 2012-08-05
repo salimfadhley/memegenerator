@@ -1,0 +1,19 @@
+{% extends './common.html' %}
+
+{% block title %} Meme Generator{% end %}
+
+{% block content %} 
+
+<h2>before you can</h2>
+
+<img id="loginpic" src="/static/img/allthememes-memed.jpg"/>
+
+<h2>you have to log in!</h2>
+
+<form method="POST" action="/login">
+  Username: <input type="text" name="name"/><br />
+  Password: <input type="password" name="pass"/><br />
+  <input type="submit" value="SIGN IN" />
+</form>
+
+{% end %}
